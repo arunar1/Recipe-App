@@ -16,7 +16,10 @@ export default function Menu() {
     console.log(menu)
     let menuImages=menu.map((item)=>{
         return (
+           <div>
             <img src={item.strMealThumb} />
+            <h2>{item.strCategory}</h2>
+           </div>
         )
     })
     
