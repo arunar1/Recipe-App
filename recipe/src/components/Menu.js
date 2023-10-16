@@ -1,6 +1,6 @@
 import React from 'react'
 import {useEffect,useState } from 'react'
-
+import Hero from './Hero'
 export default function Menu() {
     const [menu,setmenu]=useState([])
     const fetchdata=(async()=>{
@@ -25,7 +25,8 @@ export default function Menu() {
     
   return (
     <div>
-        {menuImages}
+       <Hero/> 
+       {menuImages}
       
     </div>
   )
