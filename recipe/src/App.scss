@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+//hero css
+
+.hero{
+  position: relative;
+  height:55vh;
+  overflow:hidden;
+  img{
+    width: 100%;
+  }
+  
+  .hero-content{
+    position: absolute;
+    
+    right: 200px;
+    top: 10%;
+    transform: translateX(-80%); 
+    color: white;
+    color: yellow;
+    h1{
+      text-shadow: 5px 1px 10px rgb(131, 129, 129);
+    }
+
+  }
+}
