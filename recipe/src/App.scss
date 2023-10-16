@@ -52,7 +52,7 @@
     
     right: 200px;
     top: 10%;
-    transform: translateX(-40%); 
+    transform: translateY(40%); 
     color: white;
     color: yellow;
     h1{
@@ -90,4 +90,21 @@ h2{
   margin-bottom: 18px;
   font-size: 38;
 
+}
+.special-menu{
+  img{
+    width: 300px;
+  }
+  .img-size{
+    display: flex;
+  }
+ 
+}
+
+.flex{
+  display: flex;
+}
+
+.listdec{
+  list-style-type: none;
 }

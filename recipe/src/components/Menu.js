@@ -27,8 +27,7 @@ export default function Menu() {
   return (
     <div>
        <Hero/> 
-       <Special/>
-      
+       <Special  specialmenu={menu}/>
     </div>
   )
 }

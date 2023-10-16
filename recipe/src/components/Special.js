@@ -1,12 +1,32 @@
 import React from 'react'
 
-export default function Special() {
+export default function Special(props) {
+    console.log(props.specialmenu)
+    let specialmenu=props.specialmenu.map((menuitem)=>{
+        return(
+        <ul className='flex listdec'>
+            <li>
+                <img src={menuitem.strMealThumb}/>
+                <h3>{menuitem.strCategory}</h3>
+            </li>     
+        </ul>
+        )
+    })
+
+
+
+
   return (
     <section className='special'>
         <div className="container">
             <div className="special-content">
-            <h1>Temple</h1>
-            <p>The primary deity worshipped at Kottayil Temple is Lord Shiva. Lord Shiva is one of the principal deities in Hinduism and is often referred to as the "Destroyer" or "Transformer" within the Holy Trinity, alongside Brahma (the Creator) and Vishnu (the Preserver). Devotees come here to seek Lord Shiva's blessings and to participate in various rituals and ceremonies dedicated to Him.</p>
+            <h1>Heading</h1>
+            <p>content....</p>
+            </div>
+            <div className="special-menu">
+                <h2>Special menu</h2>
+                <div className='img-size'>{specialmenu}</div>
+
             </div>
         </div>
     </section>
