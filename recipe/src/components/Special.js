@@ -6,8 +6,8 @@ export default function Special(props) {
         return(
         <ul className='flex listdec'>
             <li>
-                <img src={menuitem.strMealThumb}/>
-                <h3>{menuitem.strCategory}</h3>
+                <img  className='border-radius-5' src={menuitem.strMealThumb}/>
+                <h3 className='automar'>{menuitem.strCategory}</h3>
             </li>     
         </ul>
         )
@@ -20,8 +20,9 @@ export default function Special(props) {
     <section className='special'>
         <div className="container">
             <div className="special-content">
-            <h1>Heading</h1>
-            <p>content....</p>
+            <h1>Our Special Dishes</h1>
+
+            <p>Taj is the one of the famous hotel in india which in No.1 in food Quality and supply chain</p>
             </div>
             <div className="special-menu">
                 <h2>Special menu</h2>

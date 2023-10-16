@@ -41,7 +41,7 @@
 
 .hero{
   position: relative;
-  height:55vh;
+  height:40vh;
   overflow:hidden;
   img{
     width: 100%;
@@ -92,19 +92,29 @@ h2{
 
 }
 .special-menu{
+
   img{
     width: 300px;
   }
   .img-size{
     display: flex;
+    flex-wrap: wrap;
   }
  
 }
 
 .flex{
   display: flex;
+  flex-wrap: wrap;
 }
 
 .listdec{
   list-style-type: none;
+}
+.border-radius-5{
+  border-radius: 5px;
+}
+.automar{
+  margin: auto;
+  align-items: center;
 }
