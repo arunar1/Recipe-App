@@ -19,7 +19,7 @@ export default function Menu() {
             let respose=await fetch(API_URL)
             
             let data=respose.json()
-            console.log(respose)
+            console.log(data)
             
 
 
