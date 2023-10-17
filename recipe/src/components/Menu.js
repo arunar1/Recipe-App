@@ -2,8 +2,10 @@ import React from 'react'
 import {useEffect,useState } from 'react'
 import Hero from './Hero'
 import Special from './Special'
+import FilteredDishes from './FilteredDishes'
 export default function Menu() {
     const [menu,setmenu]=useState([])
+    const [catemenu,setcatmenu]=useState([])
     const fetchdata=(async()=>{
         const API_URL="https://www.themealdb.com/api/json/v1/1/search.php?f=c"
          let response=await fetch(API_URL)
@@ -11,8 +13,20 @@ export default function Menu() {
          setmenu(data.meals)
          console.log(menu)
         })
+
+        const categorydata=(async()=>{
+            const API_URL="https://www.themealdb.com/api/json/v1/1/categories.php";
+            let respose=await fetch(API_URL)
+            
+            let data=respose.json()
+            console.log(respose)
+            
+
+
+        })
     useEffect(()=>{
         fetchdata()
+        categorydata()
     },[])
     console.log(menu)
     let menuImages=menu.map((item)=>{

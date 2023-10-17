@@ -42,11 +42,12 @@
 
 .hero{
   position: relative;
-  height:50vh;
+  height:55vh;
   overflow:hidden;
+  object-fit: fill;
   img{
-    width: 100%;
-    transform: translateY(-50%);
+    width:100%;
+    transform: translateY(-30%);
   }
   
   .hero-content{
