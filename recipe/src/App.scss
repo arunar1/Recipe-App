@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #282c34;
 }
 
 .App-logo {
@@ -41,10 +42,11 @@
 
 .hero{
   position: relative;
-  height:40vh;
+  height:50vh;
   overflow:hidden;
   img{
     width: 100%;
+    transform: translateY(-50%);
   }
   
   .hero-content{
@@ -116,5 +118,15 @@ h2{
 }
 .automar{
   margin: auto;
-  align-items: center;
+  text-align: center;
+  padding-block:10px;
+  background-color: rgb(66, 54, 54);
+  
+}
+
+
+.bg-color{
+  background-color: #282c34;
+  color: wheat;
+
 }

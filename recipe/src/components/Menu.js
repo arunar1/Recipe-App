@@ -25,7 +25,7 @@ export default function Menu() {
     })
     
   return (
-    <div>
+    <div className='bg-color'>
        <Hero/> 
        <Special  specialmenu={menu}/>
     </div>
