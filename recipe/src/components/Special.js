@@ -2,15 +2,19 @@ import React from 'react'
 
 export default function Special(props) {
     console.log(props.specialmenu)
-    let specialmenu=props.specialmenu.map((menuitem)=>{
-        return(
-        <ul className='flex listdec'>
-            <li>
-                <img  className='border-radius-5' src={menuitem.strMealThumb}/>
-                <h3 className='automar'>{menuitem.strCategory}</h3>
-            </li>     
-        </ul>
+
+    let maxdishes=8
+    let specialmenu=props.specialmenu.map((menuitem,index)=>{
+        if(index < maxdishes){
+            return(
+                <ul className='flex listdec'>
+                    <li>
+                        <img  className='border-radius-5' src={menuitem.strMealThumb}/>
+                        <h3 className='automar'>{menuitem.strCategory}</h3>
+                    </li>     
+                </ul>
         )
+        }
     })
 
 
@@ -27,7 +31,6 @@ export default function Special(props) {
             <div className="special-menu">
                 <h2>Special menu</h2>
                 <div className='img-size'>{specialmenu}</div>
-
             </div>
         </div>
     </section>
