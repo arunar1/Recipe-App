@@ -15,7 +15,7 @@ export default function Menu() {
         })
 
         const categorydata=(async()=>{
-            const API_URL="https://www.themealdb.com/api/json/v1/1/categories.php";
+            const API_URL="https://www.themealdb.com/api/json/v1/1/search.php?f=c";
             let respose=await fetch(API_URL)
             
             let data=respose.json()
