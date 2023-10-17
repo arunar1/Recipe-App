@@ -131,3 +131,28 @@ h2{
   color: wheat;
 
 }
+
+.categoryspecial{
+  padding: 10px;
+  background-color: yellow;
+  margin: 30px;
+  color: black;
+  border-radius: 5px;
+  &:hover{
+    background-color: rgb(4, 4, 8);
+    color: white;
+  }
+  &:active{
+    background-color: red;
+  }
+  &:visited{
+    color: green;
+  }
+
+}
+
+.container{
+  h2{
+    margin-left: 50px;
+  }
+}

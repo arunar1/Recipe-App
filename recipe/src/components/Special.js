@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function Special(props) {
-    console.log(props.specialmenu)
+    // console.log(props.specialmenu)
 
     let maxdishes=8
     let specialmenu=props.specialmenu.map((menuitem,index)=>{

@@ -11,18 +11,15 @@ export default function Menu() {
          let response=await fetch(API_URL)
          let data= await response.json()
          setmenu(data.meals)
-         console.log(menu)
+        //  console.log(menu)
         })
 
         const categorydata=(async()=>{
-            const API_URL="https://www.themealdb.com/api/json/v1/1/search.php?f=c";
+            const API_URL="https://www.themealdb.com/api/json/v1/1/categories.php";
             let respose=await fetch(API_URL)
             
-            let data=respose.json()
-            console.log(data)
-            
-
-
+            let data=await respose.json()
+            setcatmenu(data.categories)
         })
     useEffect(()=>{
         fetchdata()
@@ -42,6 +39,7 @@ export default function Menu() {
     <div className='bg-color'>
        <Hero/> 
        <Special  specialmenu={menu}/>
+       <FilteredDishes allmenucategories={catemenu} allmenus={menu}/>
     </div>
   )
 }
