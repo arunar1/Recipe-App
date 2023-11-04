@@ -6,8 +6,11 @@ console.log(props.allmenus)
   
   
   const [filtereddishes,setfiltereddishes]=useState([])
+  const [activedish,setactivedish]=useState()
   const showFilteredDishes=(category)=>{
+    setactivedish(category)
 
+  
   let filtereddish=props.allmenus.filter((item)=>{
       console.log(item)
       return item.strCategory===category
@@ -25,7 +28,7 @@ console.log(props.allmenus)
   }
   const allcategories= props.allmenucategories.map((item)=>{
     return(
-      <li onClick={()=>{showFilteredDishes(item.strCategory)}} className='categoryspecial'>{item.strCategory}</li>
+      <li  className={` categoryspecial ${item.strCategory==activedish?"active":""}`} onClick={()=>{showFilteredDishes(item.strCategory)}}>{item.strCategory}</li>
     )
 
   })
@@ -46,7 +49,8 @@ console.log(props.allmenus)
       </div>
       <div className="filtered-dishes-list">
         <ul className='flex listdec'>
-          {filtereddishes}
+          {filtereddishes.length >= 1 ? filtereddishes:<div><h2>Nothing available</h2></div>}
+          
 
         </ul>
 
