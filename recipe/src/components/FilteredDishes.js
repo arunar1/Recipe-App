@@ -49,7 +49,7 @@ console.log(props.allmenus)
       </div>
       <div className="filtered-dishes-list">
         <ul className='flex listdec'>
-          {filtereddishes.length >= 1 ? filtereddishes:<div><h2>Nothing available</h2></div>}
+          {filtereddishes.length >= 1 ? filtereddishes :<div><h2>Nothing available</h2></div>}
           
 
         </ul>
