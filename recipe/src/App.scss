@@ -79,11 +79,16 @@
   }
 }
 section{
-  margin: 100px;
+  // margin: 100px;
 }
 
 //special 
 .special{
+  .container{
+  width: 85%;
+  margin: auto;
+  }
+   
   .special-content{
     margin: auto;
     padding-bottom: 20px;
@@ -120,6 +125,7 @@ h2{
 .flex{
   display: flex;
   flex-wrap: wrap;
+  
 }
 
 .listdec{
@@ -164,7 +170,7 @@ h2{
 
 .container{
   h2{
-    margin-left: 50px;
+    // margin-left: 50px;
   }
 }
 
@@ -188,3 +194,8 @@ h2{
 
 }
 
+.filtered-dishes{
+  width: 87%;
+  margin: auto;
+
+  }
