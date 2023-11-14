@@ -3,7 +3,7 @@ import React from 'react'
 export default function Special(props) {
     // console.log(props.specialmenu)
 
-    let maxdishes=8
+    let maxdishes=10
     let specialmenu=props.specialmenu.map((menuitem,index)=>{
         if(index < maxdishes){
             return(
