@@ -1,12 +1,18 @@
 import React, { useState } from 'react'
-
+import Pagination from './Pagination'
 export default function FilteredDishes(props) {
  
+
 console.log(props.allmenus)
   
   
   const [filtereddishes,setfiltereddishes]=useState([])
   const [activedish,setactivedish]=useState()
+  const [currentPage,setCurrentPage]=useState(1)
+  const [itemsPerPage,setItemsPerPage]=useState(4)
+
+
+
   const showFilteredDishes=(category)=>{
     setactivedish(category)
 
@@ -53,7 +59,9 @@ console.log(props.allmenus)
           
 
         </ul>
-
+        <Pagination
+          filtereddishes={filtereddishes}
+        ></Pagination>
       </div>
     </div>
   )
