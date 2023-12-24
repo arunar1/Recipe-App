@@ -5,11 +5,11 @@ export default function FilteredDishes(props) {
 
 console.log(props.allmenus)
   
-  
   const [filtereddishes,setfiltereddishes]=useState([])
   const [activedish,setactivedish]=useState()
   const [currentPage,setCurrentPage]=useState(1)
   const [itemsPerPage,setItemsPerPage]=useState(4)
+  const [flag,setflag]=useState(0)
 
   let indexOfLastdish=currentPage * itemsPerPage ;
   //1 * 4 = 4
@@ -27,10 +27,12 @@ console.log(props.allmenus)
 
   const showFilteredDishes=(category)=>{
     setactivedish(category)
+    
 
   
   let filtereddish=props.allmenus.filter((item)=>{
       setCurrentPage(1)
+      setflag(1)
       console.log(item)
       return item.strCategory===category
     }).map((item)=>{
@@ -67,9 +69,9 @@ console.log(props.allmenus)
             {allcategories}
         </ul>
       </div>
-      <div className="filtered-dishes-list">
-        <ul className='flex listdec'>
-          {filtereddishes.length >= 1 ? showThisDishesNow :<div><h2>Nothing available</h2></div>}
+      <div className="filtered-dishes-list just" >
+        <ul className='flex listdec just'>
+          {filtereddishes.length >= 1 ? showThisDishesNow :<div><h2>{flag==0 ? "Select the Menu":"Nothing is Availble" }</h2></div>}
           
 
         </ul>
