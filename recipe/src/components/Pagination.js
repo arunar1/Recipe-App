@@ -9,8 +9,16 @@ function Pagination(props) {
   }
   console.log(numberofpages)
 
+  let pages=numberofpages.map((item)=>{
+    return <li className='pagestyle'>{item}</li>
+  })
+
   return (
-    <div>Pagination</div>
+    <section>
+      <ul className='pagination flex'>
+        {pages}
+      </ul>
+    </section>
   )
 }
 
