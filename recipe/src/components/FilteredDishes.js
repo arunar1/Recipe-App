@@ -11,6 +11,18 @@ console.log(props.allmenus)
   const [currentPage,setCurrentPage]=useState(1)
   const [itemsPerPage,setItemsPerPage]=useState(4)
 
+  let indexOfLastdish=currentPage * itemsPerPage ;
+  //1 * 4 = 4
+  //2 * 4 = 8
+  //3 * 4 = 12
+
+  let indexOfFirstDish =indexOfLastdish - itemsPerPage
+
+  //4  - 4 = 0
+  //8  - 4 = 4
+  //12 - 4 = 8
+
+  let showThisDishesNow = filtereddishes.slice(indexOfFirstDish,indexOfLastdish);
 
 
   const showFilteredDishes=(category)=>{
@@ -55,7 +67,7 @@ console.log(props.allmenus)
       </div>
       <div className="filtered-dishes-list">
         <ul className='flex listdec'>
-          {filtereddishes.length >= 1 ? filtereddishes :<div><h2>Nothing available</h2></div>}
+          {filtereddishes.length >= 1 ? showThisDishesNow :<div><h2>Nothing available</h2></div>}
           
 
         </ul>
