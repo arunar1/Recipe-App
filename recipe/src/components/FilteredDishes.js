@@ -30,10 +30,12 @@ console.log(props.allmenus)
 
   
   let filtereddish=props.allmenus.filter((item)=>{
+      setCurrentPage(1)
       console.log(item)
       return item.strCategory===category
     }).map((item)=>{
       return(
+        
         <li className='normal'>
           <img className='size1' src={item.strMealThumb}/>
           <h2>{item.strMeal}</h2>
@@ -46,7 +48,7 @@ console.log(props.allmenus)
   }
   const allcategories= props.allmenucategories.map((item)=>{
     return(
-      <li  className={` categoryspecial ${item.strCategory==activedish?"active":""}`} onClick={()=>{showFilteredDishes(item.strCategory)}}>{item.strCategory}</li>
+      <li  className={` categoryspecial ${item.strCategory===activedish?"active":""}`} onClick={()=>{showFilteredDishes(item.strCategory)}}>{item.strCategory}</li>
     )
 
   })
@@ -73,6 +75,9 @@ console.log(props.allmenus)
         </ul>
         <Pagination
           filtereddishes={filtereddishes}
+          itemsPerPage={itemsPerPage}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
         ></Pagination>
       </div>
     </div>
