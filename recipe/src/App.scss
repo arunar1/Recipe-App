@@ -255,3 +255,19 @@ h2{
     }
 
   }
+.popUpContainer{
+      position: fixed;
+      top: 30vh;
+
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      z-index: 100;
+  .popUp{
+    width: 400px;
+    height:400px;
+    background-color: black;
+    color: white;
+    }
+}

@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import Pagination from './Pagination'
+import PopUp from './PopUp'
 export default function FilteredDishes(props) {
  
 
 console.log(props.allmenus)
   
+
+  const [showPopUp,setShowPopUp]=useState(false)
   const [filtereddishes,setfiltereddishes]=useState([])
   const [activedish,setactivedish]=useState()
   const [currentPage,setCurrentPage]=useState(1)
@@ -29,6 +32,10 @@ console.log(props.allmenus)
     setactivedish(category)
     
 
+  const popUpHandler=()=>{
+    setShowPopUp(!showPopUp)
+  }
+
   
   let filtereddish=props.allmenus.filter((item)=>{
       setCurrentPage(1)
@@ -39,9 +46,10 @@ console.log(props.allmenus)
       return(
         
         <li className='normal'>
-          <img className='size1' src={item.strMealThumb}/>
+         <a href='javaScript:;' onClick={popUpHandler}> <img className='size1' src={item.strMealThumb}/> </a>
           <h2>{item.strMeal}</h2>
         </li>
+       
       )
     })
     setfiltereddishes(filtereddish)
@@ -75,6 +83,7 @@ console.log(props.allmenus)
           
 
         </ul>
+        {showPopUp && <PopUp setShowPopUp={setShowPopUp} />}
         <Pagination
           filtereddishes={filtereddishes}
           itemsPerPage={itemsPerPage}
