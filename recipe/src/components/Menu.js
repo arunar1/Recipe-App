@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import Hero from './Hero'
 import Special from './Special'
 import FilteredDishes from './FilteredDishes'
+import Header from './Header'
 export default function Menu() {
     const [menu, setmenu] = useState([])
 
@@ -40,6 +41,7 @@ export default function Menu() {
 
     return (
         <div className='bg-color'>
+            <Header/>
             <Hero />
             {!loading ? (<Special specialmenu={menu} />) :
 

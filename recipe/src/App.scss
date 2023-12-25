@@ -219,3 +219,39 @@ h2{
 .just{
     justify-content: center;
   }
+
+.div{
+  }  
+.header{
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  height: 10vh;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0,0 ,0 ,.7 );
+  ul{
+  margin: 0;
+  padding: 0;
+  color: white;
+  list-style-type: none;
+  position: relative;
+  top: 4vh;
+  
+
+  li{
+      padding-inline: 50px;
+      width: 30px;
+      
+      display: flex;
+      justify-content: center;
+
+      &:hover{
+        color:yellow;
+        border-radius: 25%;
+        background-color: blue;
+        }
+    }
+    }
+
+  }
