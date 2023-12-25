@@ -258,16 +258,17 @@ h2{
 .popUpContainer{
       position: fixed;
       top: 30vh;
-
       width: 100vw;
       height: 100vh;
       display: flex;
       justify-content: center;
       z-index: 100;
   .popUp{
-    width: 400px;
+    width: 800px;
     height:400px;
-    background-color: black;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(0,0 ,0 ,.9 );
     color: white;
     }
 }

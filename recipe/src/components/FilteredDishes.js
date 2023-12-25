@@ -6,6 +6,7 @@ export default function FilteredDishes(props) {
 
 console.log(props.allmenus)
   
+  const [selectedItem,setSelectedItem]=useState()
 
   const [showPopUp,setShowPopUp]=useState(false)
   const [filtereddishes,setfiltereddishes]=useState([])
@@ -32,7 +33,8 @@ console.log(props.allmenus)
     setactivedish(category)
     
 
-  const popUpHandler=()=>{
+  const popUpHandler=(item)=>{
+    setSelectedItem(item)
     setShowPopUp(!showPopUp)
   }
 
@@ -46,7 +48,7 @@ console.log(props.allmenus)
       return(
         
         <li className='normal'>
-         <a href='javaScript:;' onClick={popUpHandler}> <img className='size1' src={item.strMealThumb}/> </a>
+         <a href='javaScript:;' onClick={()=>{popUpHandler(item)}}> <img className='size1' src={item.strMealThumb}/> </a>
           <h2>{item.strMeal}</h2>
         </li>
        
@@ -83,7 +85,7 @@ console.log(props.allmenus)
           
 
         </ul>
-        {showPopUp && <PopUp setShowPopUp={setShowPopUp} />}
+        {showPopUp && <PopUp setShowPopUp={setShowPopUp}  item={selectedItem}/>}
         <Pagination
           filtereddishes={filtereddishes}
           itemsPerPage={itemsPerPage}
