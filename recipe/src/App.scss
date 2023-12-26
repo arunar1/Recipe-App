@@ -111,7 +111,20 @@ h2{
   width:80vw;
   
 
-  img{
+  
+  .img-size{
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: center;
+    img{
+    width: 200px;
+  }
+  }
+
+
+}
+
+ img{
     width: 200px;
   }
   .img-size{
@@ -120,7 +133,6 @@ h2{
     justify-content: center;
   }
  
-}
 
 .flex{
   display: flex;
@@ -197,6 +209,9 @@ h2{
 .filtered-dishes{
   width: 88%;
   margin: auto;
+  img{
+    padding: 20px;
+    }
 
   }
 
@@ -259,13 +274,13 @@ h2{
       position: fixed;
       top: 30vh;
       width: 100vw;
-      height: 100vh;
+      // height: 100vh;
       display: flex;
       justify-content: center;
       z-index: 100;
   .popUp{
     width: 800px;
-    height:400px;
+    
     padding: 20px;
     border-radius: 20px;
     background-color: rgba(0,0 ,0 ,.9 );

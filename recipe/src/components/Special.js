@@ -1,15 +1,13 @@
 import React,{useState} from 'react'
 
 import PopUp from './PopUp'
+import Card from './Card'
 export default function Special(props) {
     const [showPopUp,setShowPopUp]=useState(false)
     const [selectedItem,setSelectedItem]=useState()
 
     // console.log(props.specialmenu)
-    const popUpHandler=(item)=>{
-        setSelectedItem(item)
-        setShowPopUp(!showPopUp)
-      }
+    
     
 
     let maxdishes=10
@@ -17,10 +15,7 @@ export default function Special(props) {
         if(index < maxdishes){
             return(
                 <ul className='flex listdec'>
-                    <li>
-                        <a onClick={()=>{popUpHandler(menuitem)}}> <img  className='border-radius-5' src={menuitem.strMealThumb}/></a>
-                        <h3 className='automar'>{menuitem.strCategory}</h3>
-                    </li>     
+                   <Card item={menuitem} setShowPopUp={setShowPopUp} setSelectedItem={setSelectedItem}/>     
                 </ul>
         )
         }
@@ -41,7 +36,7 @@ export default function Special(props) {
                 <h2>Special menu</h2>
                 <div className='img-size'>{specialmenu}</div>
             </div>
-            {showPopUp && <PopUp setShowPopUp={setShowPopUp} item={selectedItem} />}
+            {showPopUp && <PopUp setShowPopUp={setShowPopUp} item={selectedItem}  showPopUp={showPopUp}/>}
         </div>
     </section>
   )

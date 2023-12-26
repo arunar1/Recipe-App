@@ -1,11 +1,15 @@
 import React from 'react'
 
 function Card(props) {
+    const popUpHandler=(item)=>{
+        props.setSelectedItem(item)
+        props.setShowPopUp(!props.showPopUp)
+      }
   return (
-    <li className='normal img-size '>
-    <img className='size1 border-radius-5' src={props.item.strMealThumb}/>
-    <h2>{props.item.strMeal}</h2>
-  </li>
+ <li>
+    <a onClick={()=>{popUpHandler(props.item)}}> <img  className='border-radius-5' src={props.item.strMealThumb}/></a>
+    <h3 className='automar'>{props.item.strCategory}</h3>
+</li>
   )
 }
 

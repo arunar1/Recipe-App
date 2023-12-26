@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Pagination from './Pagination'
 import PopUp from './PopUp'
+import Card from './Card'
 export default function FilteredDishes(props) {
  
 
@@ -35,7 +36,10 @@ console.log(props.allmenus)
 
   const popUpHandler=(item)=>{
     setSelectedItem(item)
-    setShowPopUp(!showPopUp)
+    setShowPopUp(true)
+
+    
+    
   }
 
   
@@ -47,10 +51,7 @@ console.log(props.allmenus)
     }).map((item)=>{
       return(
         
-        <li className='normal'>
-         <a href='javaScript:;' onClick={()=>{popUpHandler(item)}}> <img className='size1' src={item.strMealThumb}/> </a>
-          <h2>{item.strMeal}</h2>
-        </li>
+        <Card item={item} setShowPopUp={setShowPopUp} setSelectedItem={setSelectedItem}/> 
        
       )
     })
@@ -79,20 +80,21 @@ console.log(props.allmenus)
             {allcategories}
         </ul>
       </div>
-      <div className="filtered-dishes-list just" >
-        <ul className='flex listdec just'>
+      <div className="filtered-dishes-list img-size" >
+        <ul className='flex listdec just flex'>
           {filtereddishes.length >= 1 ? showThisDishesNow :<div><h2>{flag==0 ? "Select the Menu":"Nothing is Availble" }</h2></div>}
           
 
         </ul>
-        {showPopUp && <PopUp setShowPopUp={setShowPopUp}  item={selectedItem}/>}
-        <Pagination
+        {showPopUp && <PopUp setShowPopUp={setShowPopUp}  item={selectedItem} showPopUp={showPopUp}/>}
+
+      </div>
+      <Pagination
           filtereddishes={filtereddishes}
           itemsPerPage={itemsPerPage}
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}
         ></Pagination>
-      </div>
     </div>
   )
 }
