@@ -112,7 +112,7 @@ h2{
   
 
   
-  .img-size{
+.img-size{
     display: flex;
     flex-wrap: wrap ;
     justify-content: center;
@@ -123,14 +123,13 @@ h2{
 
 
 }
-
- img{
-    width: 200px;
-  }
   .img-size{
     display: flex;
     flex-wrap: wrap ;
     justify-content: center;
+    img{
+      width: 200px;
+      }
   }
  
 
@@ -272,12 +271,17 @@ h2{
   }
 .popUpContainer{
       position: fixed;
-      top: 30vh;
-      width: 100vw;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
       // height: 100vh;
       display: flex;
       justify-content: center;
+      align-items: center;
       z-index: 100;
+      background-color: rgba(0,0 ,0 ,.7 );
+    color: white;
   .popUp{
     width: 800px;
     
@@ -285,5 +289,33 @@ h2{
     border-radius: 20px;
     background-color: rgba(0,0 ,0 ,.9 );
     color: white;
+    .backbutton{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      }
+    button{
+      display: block;
+      padding-inline:10px;
+      border-radius: 10px;
+      }
+      img{
+        width: 250px;
+        }
+      .popimg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div{
+          // width: 400px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          
+          
+          align-items: center;
+          }
+        }
+
     }
 }
