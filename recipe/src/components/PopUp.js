@@ -4,6 +4,13 @@ function PopUp(props) {
   console.log(props);
   return (
     <div className="popUpContainer">
+      <button className="closebtn"
+            onClick={() => {
+              props.setShowPopUp(false);
+            }}
+          >
+            back
+          </button>
       <div className="popUp">
         <div className="popimg">
           <div>
@@ -21,13 +28,7 @@ function PopUp(props) {
           {props.item.strInstructions}</div>
         </p>
         <div className="backbutton">
-          <button
-            onClick={() => {
-              props.setShowPopUp(false);
-            }}
-          >
-            back
-          </button>
+          
         </div>
       </div>
     </div>
