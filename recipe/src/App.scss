@@ -283,7 +283,15 @@ h2{
       background-color: rgba(0,0 ,0 ,.7 );
     color: white;
   .popUp{
-    width: 800px;
+    width: 70vw;
+
+    .about{
+      div{
+        font-size: 10px;
+        display: inline;
+        }
+      
+      }
     
     padding: 20px;
     border-radius: 20px;
@@ -301,6 +309,7 @@ h2{
       }
       img{
         width: 250px;
+        border-radius: 20px;
         }
       .popimg{
         display: flex;
