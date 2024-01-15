@@ -25,7 +25,7 @@ function PopUp(props) {
           {props.item.strArea}
         </p> */}
         <p className="about">
-          About &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: &nbsp;
+          About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 
           <div>{props.item.strInstructions}</div>
         </p>
         <div className="orderbutton">

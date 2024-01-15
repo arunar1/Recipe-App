@@ -295,17 +295,20 @@ h2 {
 
   .popUp {
     width: 40vw;
+    background-color: black;
+    padding: 20px;
 
     .about {
+      color: white;
       height: 100px;
       overflow-y: scroll;
+
 
       div {
         font-size: 12px;
         display: inline;
         padding: 20px;
         border-radius: 20px;
-        background-color: rgba(0, 0, 0, 0.9);
         color: white;
       }
     }
@@ -381,4 +384,9 @@ h2 {
       height: 200px;
     }
   }
+}
+
+.headline{
+  font-size: 28px;
+
 }

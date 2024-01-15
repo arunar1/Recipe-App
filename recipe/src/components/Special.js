@@ -35,7 +35,7 @@ export default function Special(props) {
           </p>
         </div>
         <div className="special-menu">
-          <h2>Special menu</h2>
+          <h1 className="headline">Special menu</h1>
           <div className="img-size">{specialmenu}</div>
         </div>
         {showPopUp && (

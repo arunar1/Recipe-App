@@ -76,7 +76,7 @@ export default function FilteredDishes(props) {
   return (
     <div className="filtered-dishes">
       <div className="container">
-        <h2>Choose your Dishes</h2>
+        <h1 className="headline">Choose your Dishes</h1>
       </div>
       <div>
         <ul className="flex listdec">{allcategories}</ul>
@@ -88,7 +88,7 @@ export default function FilteredDishes(props) {
             showThisDishesNow
           ) : (
             <div>
-              <h2>{flag == 0 ? "Select the Menu" : "Nothing is Availble"}</h2>
+              <h1 className="headline">{flag == 0 ? "Select the Menu" : "Nothing is Availble"}</h1>
             </div>
           )}
         </ul>
