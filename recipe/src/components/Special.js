@@ -27,7 +27,7 @@ export default function Special(props) {
     <section className="special">
       <div className="container">
         <div className="special-content">
-          <h1>Our Special Dishes</h1>
+          <h1 className="headline">Our Special Dishes</h1>
 
           <p>
             Taj is the one of the famous hotel in india which in No.1 in food
