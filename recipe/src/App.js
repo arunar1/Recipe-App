@@ -1,15 +1,10 @@
-import React from 'react'
-import './App.scss'
-import Menu from './components/Menu'
+import React from "react";
+import "./App.scss";
+import Menu from "./components/Menu";
 export default function App() {
-
-
-
   return (
     <div>
-      <Menu/>
+      <Menu />
     </div>
-  )
+  );
 }
-
-
