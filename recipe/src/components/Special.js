@@ -1,15 +1,20 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 import PopUp from "./PopUp";
 import Card from "./Card";
+import { AllMenuContext } from "./Menu";
+
+
 export default function Special(props) {
+  const allmenus=useContext(AllMenuContext);
+
   const [showPopUp, setShowPopUp] = useState(false);
   const [selectedItem, setSelectedItem] = useState();
 
   // console.log(props.specialmenu)
 
   let maxdishes = 10;
-  let specialmenu = props.specialmenu.map((menuitem, index) => {
+  let specialmenu = allmenus.map((menuitem, index) => {
     if (index < maxdishes) {
       return (
         <ul className="flex listdec">
