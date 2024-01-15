@@ -215,6 +215,7 @@ h2 {
   padding-block: 10px;
   border: 2px solid black;
   margin: 10px;
+  border-radius: 50%;
 
   &:hover {
     background-color: red;
@@ -297,7 +298,7 @@ h2 {
     width: 40vw;
     background-color: black;
     padding: 20px;
-
+    
     .about {
       color: white;
       height: 100px;
@@ -333,6 +334,7 @@ h2 {
 
     img {
       border-radius: 40px;
+      
     }
 
     .popimg {
@@ -361,7 +363,7 @@ h2 {
     color: white;
     display: block;
     position: relative;
-    bottom: 25px;
+    bottom: 22px;
     background-color: rgba(0, 0, 0, 0.5);
     display: block;
 
@@ -388,5 +390,6 @@ h2 {
 
 .headline{
   font-size: 28px;
+  font-family: 'Times New Roman', Times, serif;
 
 }

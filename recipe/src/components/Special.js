@@ -1,15 +1,20 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 import PopUp from "./PopUp";
 import Card from "./Card";
+import { AllMenuContext } from "./Menu";
+
+
 export default function Special(props) {
+  const allmenus=useContext(AllMenuContext);
+
   const [showPopUp, setShowPopUp] = useState(false);
   const [selectedItem, setSelectedItem] = useState();
 
   // console.log(props.specialmenu)
 
   let maxdishes = 10;
-  let specialmenu = props.specialmenu.map((menuitem, index) => {
+  let specialmenu = allmenus.map((menuitem, index) => {
     if (index < maxdishes) {
       return (
         <ul className="flex listdec">
@@ -27,7 +32,7 @@ export default function Special(props) {
     <section className="special">
       <div className="container">
         <div className="special-content">
-          <h1>Our Special Dishes</h1>
+          <h1 className="headline">Our Special Dishes</h1>
 
           <p>
             Taj is the one of the famous hotel in india which in No.1 in food

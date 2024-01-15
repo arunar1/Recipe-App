@@ -4,6 +4,9 @@ import Hero from "./Hero";
 import Special from "./Special";
 import FilteredDishes from "./FilteredDishes";
 import Header from "./Header";
+
+export const AllMenuContext=React.createContext()
+
 export default function Menu() {
   const [menu, setmenu] = useState([]);
 
@@ -41,10 +44,11 @@ export default function Menu() {
 
   return (
     <div className="bg-color">
+      <AllMenuContext.Provider value={menu}>
       <Header />
       <Hero />
       {!loading ? (
-        <Special specialmenu={menu} />
+        <Special />
       ) : (
         <div>
           <h2>LOADING</h2>
@@ -53,6 +57,7 @@ export default function Menu() {
       {!loading ? (
         <FilteredDishes allmenucategories={catemenu} allmenus={menu} />
       ) : null}
+      </AllMenuContext.Provider>
     </div>
   );
 }
