@@ -1,310 +1,384 @@
-.App
-  text-align: center
+.App {
+  text-align: center;
   // background-color: #282c34;
 
-  &-logo
-    height: 40vmin
-    pointer-events: none
+  &-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+}
 
-@media (prefers-reduced-motion: no-preference)
-  .App-logo
-    animation: App-logo-spin infinite 20s linear
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
 
-.App-header
-  background-color: #282c34
-  min-height: 100vh
-  display: flex
-  flex-direction: column
-  align-items: center
-  justify-content: center
-  font-size: calc(10px + 2vmin)
-  color: white
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
 
-.App-link
-  color: #61dafb
+.App-link {
+  color: #61dafb;
+}
 
-@keyframes App-logo-spin
+@keyframes App-logo-spin {
   from {
-  transform: rotate(0deg)
-
+    transform: rotate(0deg);
+  }
   to {
-  transform: rotate(360deg)
+    transform: rotate(360deg);
+  }
+}
 
-//hero css
+// hero css
 
-.hero
-  position: relative
-  height: 55vh
-  overflow: hidden
-  object-fit: fill
-  img
-    width: 100%
+.hero {
+  position: relative;
+  height: 55vh;
+  overflow: hidden;
+  object-fit: fill;
 
-    transform: translateY(-40%)
+  img {
+    width: 100%;
+    transform: translateY(-40%);
+  }
 
-    &-content
-      position: absolute
+  &-content {
+    position: absolute;
+    top: 50%;
+    transform: translateX(20%);
+    color: white;
 
-      top: 50%
+    h1 {
+      font-size: 60px;
+      margin: 0;
+      text-shadow: 5px 1px 10px rgb(0, 0, 0);
+    }
 
-      transform: translateX(20%)
-      color: white
-
-    h1
-      font-size: 60px
-      margin: 0
-      text-shadow: 5px 1px 10px rgb(0, 0, 0)
-
-    p
-      padding-top: 10px
+    p {
+      padding-top: 10px;
       // color: rgb(225, 209, 209);
       // text-shadow: 5px 1px 10px rgb(91, 16, 16);
-      text-decoration: double
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
-      font-size: large
-      text-shadow: 5px 1px 10px rgb(0, 0, 0)
+      text-decoration: double;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      font-size: large;
+      text-shadow: 5px 1px 10px rgb(0, 0, 0);
+    }
+  }
+}
 
-section
+section {
   // margin: 100px;
+}
 
-//special
-.special
-  .container
-    width: 85%
-    margin: auto
+// special
 
-  .special-content
-    margin: auto
-    padding-bottom: 20px
+.special {
+  .container {
+    width: 85%;
+    margin: auto;
+  }
 
-.text-center
-  text-align: center
+  .special-content {
+    margin: auto;
+    padding-bottom: 20px;
+  }
+}
 
-h2
-  margin-bottom: 18px
-  font-size: 38
+.text-center {
+  text-align: center;
+}
 
-.special-menu
-  width: 80vw
-  ul
-    padding: 0
+h2 {
+  margin-bottom: 18px;
+  font-size: 38px;
+}
 
-  .img-size
-    display: flex
-    flex-wrap: wrap
-    justify-content: center
-    img
-      width: 200px
+.special-menu {
+  width: 80vw;
 
-.img-size
-  display: flex
-  flex-wrap: wrap
-  justify-content: center
-  img
-    width: 200px
+  ul {
+    padding: 0;
+  }
 
-.flex
-  display: flex
-  flex-wrap: wrap
+  .img-size {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
-.listdec
-  list-style-type: none
+    img {
+      width: 200px;
+    }
+  }
+}
 
-.border-radius-5
-  border-radius: 5px
+.img-size {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
-.automar
-  margin: auto
-  text-align: center
-  padding-block: 10px
+  img {
+    width: 200px;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.listdec {
+  list-style-type: none;
+}
+
+.border-radius-5 {
+  border-radius: 5px;
+}
+
+.automar {
+  margin: auto;
+  text-align: center;
+  padding-block: 10px;
   // background-color: rgb(66, 54, 54);
+}
 
-.bg-color
+.bg-color {
   // background-color: #282c34;
+}
 
-.categoryspecial
-  padding: 10px
-  background-color: rgb(146, 146, 141)
-  margin: 10px
-  color: black
-  border-radius: 5px
-  &:hover
-    background-color: rgb(4, 4, 8)
-    color: white
+.categoryspecial {
+  padding: 10px;
+  background-color: rgb(146, 146, 141);
+  margin: 10px;
+  color: black;
+  border-radius: 5px;
 
-  &:active
-    background-color: red
+  &:hover {
+    background-color: rgb(4, 4, 8);
+    color: white;
+  }
 
-  &:visited
-    color: green
+  &:active {
+    background-color: red;
+  }
 
-.container
-  h2
+  &:visited {
+    color: green;
+  }
+}
+
+.container {
+  h2 {
     // margin-left: 50px;
+  }
+}
 
-.normal
-  .size1
-    width: 200px
-    height: auto
-    padding: 20px
+.normal {
+  .size1 {
+    width: 200px;
+    height: auto;
+    padding: 20px;
+  }
 
-  h2
-    font-size: 15px
-    position: relative
-    left: 22px
+  h2 {
+    font-size: 15px;
+    position: relative;
+    left: 22px;
+  }
+}
 
-.active
-  background-color: black
-  color: white
+.active {
+  background-color: black;
+  color: white;
+}
 
-.filtered-dishes
-  width: 88%
-  margin: auto
-  img
+.filtered-dishes {
+  width: 88%;
+  margin: auto;
+
+  img {
     // padding: 20px;
+  }
+}
 
-.pagestyle
-  list-style-type: none
-  padding-inline: 20px
-  padding-block: 10px
-  border: 2px solid black
-  margin: 10px
+.pagestyle {
+  list-style-type: none;
+  padding-inline: 20px;
+  padding-block: 10px;
+  border: 2px solid black;
+  margin: 10px;
 
-  &:hover
-    background-color: red
+  &:hover {
+    background-color: red;
+  }
+}
 
-.pagination
-  justify-content: center
+.pagination {
+  justify-content: center;
+}
 
-.just
-  justify-content: center
+.just {
+  justify-content: center;
+}
 
-.div
+.div {
+}
 
-.header
-  width: 100%
-  position: fixed
-  z-index: 10
-  height: 10vh
-  margin: 0
-  padding: 0
-  background-color: rgba(0, 0, 0, 0.7)
-  ul
-    margin: 0
-    padding: 0
-    color: white
-    list-style-type: none
-    position: relative
-    top: 4vh
+.header {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  height: 10vh;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.7);
 
-    li
-      padding-inline: 50px
-      width: 30px
+  ul {
+    margin: 0;
+    padding: 0;
+    color: white;
+    list-style-type: none;
+    position: relative;
+    top: 4vh;
 
-      display: flex
-      justify-content: center
+    li {
+      padding-inline: 50px;
+      width: 30px;
 
-      &:hover
-        color: yellow
-        border-radius: 25%
-        background-color: blue
+      display: flex;
+      justify-content: center;
 
-.popUpContainer
-  position: fixed
-  top: 0
-  bottom: 0
-  right: 0
-  left: 0
+      &:hover {
+        color: yellow;
+        border-radius: 25%;
+        background-color: blue;
+      }
+    }
+  }
+}
+
+.popUpContainer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   // height: 100vh;
-  display: flex
-  justify-content: center
-  align-items: center
-  z-index: 100
-  background-color: rgba(0, 0, 0, 0.7)
-  color: white
-  .closebtn
-    position: absolute
-    top: 10px
-    right: 20px
-    padding: 8px
-    border-radius: 20px
-    border: none
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
 
-    &:hover
-      background-color: grey
-      color: white
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
 
-  .popUp
-    width: 40vw
+    &:hover {
+      background-color: grey;
+      color: white;
+    }
+  }
 
-    .about
-      height: 100px
-      overflow-y: scroll
-      div
-        font-size: 12px
+  .popUp {
+    width: 40vw;
 
-        display: inline
+    .about {
+      height: 100px;
+      overflow-y: scroll;
 
-        padding: 20px
-        border-radius: 20px
-        background-color: rgba(0, 0, 0, 0.9)
-        color: white
-    .orderbutton
-      display: flex
-      justify-content: center
-      align-items: center
+      div {
+        font-size: 12px;
+        display: inline;
+        padding: 20px;
+        border-radius: 20px;
+        background-color: rgba(0, 0, 0, 0.9);
+        color: white;
+      }
+    }
 
-    button
-      display: block
-      padding-inline: 10px
-      border-radius: 10px
-      background-color: yellow
-      border: none
+    .orderbutton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-      &:hover
-        background-color: grey
+      button {
+        display: block;
+        padding-inline: 10px;
+        border-radius: 10px;
+        background-color: yellow;
+        border: none;
 
-    img
+        &:hover {
+          background-color: grey;
+        }
+      }
+    }
 
-      border-radius: 40px
+    img {
+      border-radius: 40px;
+    }
 
-    .popimg
-      display: flex
-      justify-content: center
-      align-items: center
-      width: 40vw
-      div
+    .popimg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40vw;
 
-        height: 300px
-        display: flex
-        flex-direction: column
-        justify-content: center
-        overflow: hidden
-        align-items: center
-        border-radius: 20px
+      div {
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        align-items: center;
+        border-radius: 20px;
+      }
+    }
+  }
+}
 
-.Cardstyle
+.Cardstyle {
+  p {
+    padding: 0;
+    margin: 0;
+    color: white;
+    display: block;
+    position: relative;
+    bottom: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
 
-  p
-    padding: 0
-    margin: 0
-    color: white
-    display: block
-    position: relative
-    bottom: 25px
-    background-color: rgba(0,0,0,.5)
-    display: block
-    &:hover
+    &:hover {
+      // Add hover styles
+    }
+  }
 
-  &
-    margin: 20px
-    display: flex
-  // justify-content: left;
-    flex-direction: column
-    width: 200px
-    height: 200px
-    overflow: hidden
-  img
-    width: 200px
-    height: 200px
+  & {
+    margin: 20px;
+    display: flex;
+    // justify-content: left;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
