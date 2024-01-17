@@ -55,7 +55,7 @@ export default function Menu() {
         </div>
       )}
       {!loading ? (
-        <FilteredDishes allmenucategories={catemenu} allmenus={menu} />
+        <FilteredDishes allmenucategories={catemenu} />
       ) : null}
       </AllMenuContext.Provider>
     </div>

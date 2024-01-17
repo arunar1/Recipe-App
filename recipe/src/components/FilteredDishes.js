@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Pagination from "./Pagination";
 import PopUp from "./PopUp";
 import Card from "./Card";
+import { AllMenuContext } from "./Menu";
 export default function FilteredDishes(props) {
   console.log(props.allmenus);
-
+  let allmenu=useContext(AllMenuContext);
   const [selectedItem, setSelectedItem] = useState();
 
   const [showPopUp, setShowPopUp] = useState(false);
@@ -38,7 +39,7 @@ export default function FilteredDishes(props) {
       setShowPopUp(true);
     };
 
-    let filtereddish = props.allmenus
+    let filtereddish = allmenu
       .filter((item) => {
         setCurrentPage(1);
         setflag(1);
