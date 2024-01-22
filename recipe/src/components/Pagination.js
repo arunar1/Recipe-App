@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 function Pagination(props) {
-  console.log(props.filtereddishes);
-  console.log(props);
+  // console.log(props.filtereddishes);
+  // console.log(props);
 
   let [activepage, setactivepage] = useState(1);
 
@@ -18,7 +18,7 @@ function Pagination(props) {
   ) {
     numberofpages.push(i);
   }
-  console.log(numberofpages);
+  // console.log(numberofpages);
 
   let pages = numberofpages.map((item) => {
     return (
@@ -26,7 +26,7 @@ function Pagination(props) {
         id={item}
         onClick={(e) => {
           setactivepage(e.target.id);
-          console.log(item);
+          // console.log(item);
           props.setCurrentPage(item);
         }}
         className={`pagestyle ${item == activepage ? "active" : ""}`}

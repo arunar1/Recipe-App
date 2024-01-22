@@ -2,10 +2,11 @@ import React, { useContext, useState } from "react";
 import Pagination from "./Pagination";
 import PopUp from "./PopUp";
 import Card from "./Card";
-import { AllMenuContext } from "./Menu";
+import { AllMenuContext } from "./AllMenuContext";
 export default function FilteredDishes(props) {
-  console.log(props.allmenus);
+  // console.log(props.allmenus);
   let allmenu=useContext(AllMenuContext);
+  console.log(allmenu)
   const [selectedItem, setSelectedItem] = useState();
 
   const [showPopUp, setShowPopUp] = useState(false);
@@ -43,7 +44,7 @@ export default function FilteredDishes(props) {
       .filter((item) => {
         setCurrentPage(1);
         setflag(1);
-        console.log(item);
+        // console.log(item);
         return item.strCategory === category;
       })
       .map((item) => {
@@ -72,7 +73,7 @@ export default function FilteredDishes(props) {
     );
   });
 
-  console.log(filtereddishes);
+  // console.log(filtereddishes);
 
   return (
     <div className="filtered-dishes">

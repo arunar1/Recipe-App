@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 
 import PopUp from "./PopUp";
 import Card from "./Card";
-import { AllMenuContext } from "./Menu";
+import { AllMenuContext } from "./AllMenuContext";
 
 
 export default function Special(props) {

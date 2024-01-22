@@ -1,7 +1,7 @@
 import React from "react";
 
 function PopUp(props) {
-  console.log(props);
+  // console.log(props);
   return (
     <div className="popUpContainer">
       <button
