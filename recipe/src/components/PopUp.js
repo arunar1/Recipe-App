@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
+import { cartContent } from "./Menu";
+import { cartArray } from "./Menu";
 
 function PopUp(props) {
-  // console.log(props);
+  let ar=[];
+  let flag=0;
+  console.log(ar)
+  let ak=useContext(cartContent);
+  let cart=useContext(cartArray)
+  // console.log(props);  console.log(props)
+  cart.map((element)=>{
+    console.log(element)
+  })
   return (
     <div className="popUpContainer">
       <button
@@ -29,7 +39,18 @@ function PopUp(props) {
           <div>{props.item.strInstructions}</div>
         </p>
         <div className="orderbutton">
-          <button>Order Now</button>
+          <button onClick={()=>{
+            
+            flag=cart.map((element,index)=>{
+              if(element.idMeal === props.item.idMeal){
+                return 0
+              }
+            })
+            if(flag){
+            ak([...cart,props.item]);
+            }
+            
+          }}>Order Now</button>
         </div>
       </div>
     </div>

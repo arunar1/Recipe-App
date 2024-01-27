@@ -1,4 +1,4 @@
-// import React, { useContext } from "react";
+import React, { useContext } from "react";
 import { useEffect, useState } from "react";
 import Hero from "./Hero";
 import Special from "./Special";
@@ -6,9 +6,15 @@ import FilteredDishes from "./FilteredDishes";
 import Header from "./Header";
 import { AllMenu } from "./AllMenuContext";
 
-export default function Menu() {
-  
+export const cartContent=React.createContext();
+export const cartArray=React.createContext();
 
+export default function Menu() {
+  const [cart,setcart]=useState([])
+
+  console.log(cart);
+
+  
  
   const [catemenu, setcatmenu] = useState([]);
   const categorydata = async () => {
@@ -35,7 +41,11 @@ export default function Menu() {
       <Header />
       <Hero />			
       <AllMenu>
-        <Special />
+       <cartArray.Provider value={cart}>
+       <cartContent.Provider value={setcart}>
+          <Special  />
+        </cartContent.Provider>
+       </cartArray.Provider>
         <FilteredDishes allmenucategories={catemenu} />
       </AllMenu>
     </div>
