@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+// import React, { useContext } from "react";
 import { useEffect, useState } from "react";
 import Hero from "./Hero";
 import Special from "./Special";
@@ -33,7 +33,7 @@ export default function Menu() {
   return (
     <div className="bg-color">
       <Header />
-      <Hero />
+      <Hero />			
       <AllMenu>
         <Special />
         <FilteredDishes allmenucategories={catemenu} />

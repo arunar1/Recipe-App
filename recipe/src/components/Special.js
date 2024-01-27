@@ -4,6 +4,7 @@ import PopUp from "./PopUp";
 import Card from "./Card";
 import { AllMenuContext } from "./AllMenuContext";
 
+import { AddToCart } from "./AddToCart";
 
 export default function Special(props) {
   const allmenus=useContext(AllMenuContext);
@@ -30,7 +31,9 @@ export default function Special(props) {
 
   return (
     <section className="special">
+      <AddToCart/>
       <div className="container">
+        
         <div className="special-content">
           <h1 className="headline">Our Special Dishes</h1>
 
