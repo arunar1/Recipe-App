@@ -12,9 +12,6 @@ export const cartArray=React.createContext();
 export default function Menu() {
   const [cart,setcart]=useState([])
 
-  console.log(cart);
-
-  
  
   const [catemenu, setcatmenu] = useState([]);
   const categorydata = async () => {
@@ -27,14 +24,9 @@ export default function Menu() {
   useEffect(() => {
     categorydata();
   }, []);
-  // let menuImages = menu.map((item) => {
-  //   return (
-  //     <div>
-  //       <img src={item.strMealThumb} />
-  //       <h2>{item.strCategory}</h2>
-  //     </div>
-  //   );
-  // });
+
+
+  console.log(cart)
 
   return (
     <div className="bg-color">

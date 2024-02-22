@@ -7,9 +7,9 @@ function PopUp(props) {
   let ak=useContext(cartContent);
   let cart=useContext(cartArray)
 
-  
 
-  console.log(cart)
+
+ 
 
   return (
     <div className="popUpContainer">
@@ -39,9 +39,9 @@ function PopUp(props) {
         </p>
         <div className="orderbutton">
           <button onClick={()=>{
-            
-            
-            
+             console.log(cart,ak)
+            // let ck=props.item
+            // cart([...ak,ck])
           }}>Order Now</button>
         </div>
       </div>
