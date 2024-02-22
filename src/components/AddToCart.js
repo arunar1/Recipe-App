@@ -1,12 +1,18 @@
 
 
-export const AddToCart=()=>{
+export const AddToCart=(props)=>{
+    console.log("hello",props.cartitem)
+    let item=props.cartitem.map((element)=>{
+       return(
+        <div className="add-to-cart-item">
+             <img src={element.strMealThumb} alt="item" />
+             <h6>{element.strMeal}</h6>
+        </div>
+       )
+    })
     return(
        <div className="add-to-cart-wrapper">
-        <div className="add-to-cart-item">
-            <img src="https://www.themealdb.com/images/media/meals/tqtywx1468317395.jpg" alt="item" />
-            <h6>item name</h6>
-        </div>
+                {item} 
        </div>
     )
 }

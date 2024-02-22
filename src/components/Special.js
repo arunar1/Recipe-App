@@ -4,9 +4,15 @@ import PopUp from "./PopUp";
 import Card from "./Card";
 import { AllMenuContext } from "./AllMenuContext";
 
+import { cartContent } from "./Menu";
+
 import { AddToCart } from "./AddToCart";
 
 export default function Special(props) {
+
+  const {cart,setcart}=useContext(cartContent)
+
+  console.log("hello",cart)
 
 
   const allmenus=useContext(AllMenuContext);
@@ -33,7 +39,7 @@ export default function Special(props) {
 
   return (
     <section className="special">
-      <AddToCart/>
+      <AddToCart cartitem={cart}/>
       <div className="container">
         
         <div className="special-content">
