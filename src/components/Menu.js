@@ -7,12 +7,10 @@ import Header from "./Header";
 import { AllMenu } from "./AllMenuContext";
 
 export const cartContent=React.createContext();
-export const cartArray=React.createContext();
 
 export default function Menu() {
   const [cart,setcart]=useState([])
 
- 
   const [catemenu, setcatmenu] = useState([]);
   const categorydata = async () => {
     const API_URL = "https://www.themealdb.com/api/json/v1/1/categories.php";
@@ -33,12 +31,10 @@ export default function Menu() {
       <Header />
       <Hero />			
       <AllMenu>
-       <cartArray.Provider value={cart}>
-       <cartContent.Provider value={setcart}>
+       <cartContent.Provider value={{cart,setcart}}>
           <Special  />
-        </cartContent.Provider>
-       </cartArray.Provider>
-        <FilteredDishes allmenucategories={catemenu} />
+          <FilteredDishes allmenucategories={catemenu} />
+        </cartContent.Provider>  
       </AllMenu>
     </div>
   );

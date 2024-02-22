@@ -6,7 +6,7 @@ import { AllMenuContext } from "./AllMenuContext";
 export default function FilteredDishes(props) {
   // console.log(props.allmenus);
   let allmenu=useContext(AllMenuContext);
-  console.log(allmenu)
+  // console.log(allmenu)
   const [selectedItem, setSelectedItem] = useState();
 
   const [showPopUp, setShowPopUp] = useState(false);
