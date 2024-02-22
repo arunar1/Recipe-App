@@ -46,9 +46,14 @@ function PopUp(props) {
             })
             if(!flag){
               setcart([...cart,ak])
+              props.setShowPopUp(false);
             }
+            else{
+              alert("Already Added")
+            }
+            
             console.log(cart)     
-          }}>Order Now</button>
+          }}>Add To Cart</button>
         </div>
       </div>
     </div>
