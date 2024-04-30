@@ -7,13 +7,17 @@ export const AddToCart=(props)=>{
         <div className="add-to-cart-item">
              <img src={element.strMealThumb} alt="item" />
              <h6>{element.strMeal}</h6>
-             
+
         </div>
        )
     })
     return(
-       <div className="add-to-cart-wrapper">
-                {item} 
-       </div>
+      item.length ?(
+         <div className="add-to-cart-wrapper">
+            <h3>CART</h3>
+         {item} 
+         </div>
+      ):
+      null
     )
 }
