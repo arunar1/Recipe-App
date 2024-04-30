@@ -7,6 +7,7 @@ export const AddToCart=(props)=>{
         <div className="add-to-cart-item">
              <img src={element.strMealThumb} alt="item" />
              <h6>{element.strMeal}</h6>
+             
         </div>
        )
     })
