@@ -1,5 +1,3 @@
-
-
 export const AddToCart=(props)=>{
     console.log("hello",props.cartitem)
     let item=props.cartitem.map((element)=>{

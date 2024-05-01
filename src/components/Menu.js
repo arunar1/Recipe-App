@@ -50,7 +50,7 @@ export default function Menu() {
                 }
               />
 
-              <Route path="/checkout" element={<Checkout />} />
+              <Route path="/checkout" element={<Checkout cart={cart} />} />
             </Routes>
           </cartContent.Provider>
         </AllMenu>

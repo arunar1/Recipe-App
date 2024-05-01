@@ -55,7 +55,7 @@
 
   &-content {
     position: absolute;
-    top: 50%;
+    top: 20vh;
     transform: translateX(20%);
     color: white;
 
@@ -444,3 +444,32 @@ h2 {
   align-items: center;
   text-align: center;
     }
+
+
+  .checkoutCard{
+    justify-content: 'center';
+    text-align: center;
+    padding: 20px;
+   
+    img{
+      width: 200px;
+      height: 200px;
+      border-radius: 3px;
+      }
+    }
+
+    .checkout{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap
+      }
+
+@media screen and ( max-width:700px  ){
+  .hero{
+     img {
+    width: 100%;
+    transform: translateY(0%);
+  }
+    }
+  }
+  
