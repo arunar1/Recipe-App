@@ -5,11 +5,17 @@ import Special from "./Special";
 import FilteredDishes from "./FilteredDishes";
 import Header from "./Header";
 import { AllMenu } from "./AllMenuContext";
-
-export const cartContent=React.createContext();
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Switch,
+} from "react-router-dom";
+import Checkout from "./Checkout";
+export const cartContent = React.createContext();
 
 export default function Menu() {
-  const [cart,setcart]=useState([])
+  const [cart, setcart] = useState([]);
 
   const [catemenu, setcatmenu] = useState([]);
   const categorydata = async () => {
@@ -23,19 +29,32 @@ export default function Menu() {
     categorydata();
   }, []);
 
-
-  console.log(cart)
+  console.log(cart);
 
   return (
     <div className="bg-color">
+      
+      <Router>
       <Header />
-      <Hero />			
-      <AllMenu>
-       <cartContent.Provider value={{cart,setcart}}>
-          <Special  />
-          <FilteredDishes allmenucategories={catemenu} />
-        </cartContent.Provider>  
-      </AllMenu>
+      <Hero />
+        <AllMenu>
+          <cartContent.Provider value={{ cart, setcart }}>
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <>
+                    <Special />
+                    <FilteredDishes allmenucategories={catemenu} />
+                  </>
+                }
+              />
+
+              <Route path="/checkout" element={<Checkout />} />
+            </Routes>
+          </cartContent.Provider>
+        </AllMenu>
+      </Router>
     </div>
   );
 }

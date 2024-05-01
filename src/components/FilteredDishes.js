@@ -3,6 +3,8 @@ import Pagination from "./Pagination";
 import PopUp from "./PopUp";
 import Card from "./Card";
 import { AllMenuContext } from "./AllMenuContext";
+import Checkout from "./Checkout";
+
 export default function FilteredDishes(props) {
   // console.log(props.allmenus);
   let allmenu=useContext(AllMenuContext);
