@@ -11,8 +11,15 @@ export default function Checkout(props) {
         )
     })
   return (
+    <>
     <div className="checkout">
        {item}
     </div>
+     <div className="checkoutbtn">
+     <div className="buybtn">
+       Buy
+     </div>
+    </div>
+    </>
   )
 }
