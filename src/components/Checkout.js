@@ -1,6 +1,12 @@
 import React from 'react'
 
 export default function Checkout(props) {
+
+  const handleBuy=()=>{
+    
+  }
+
+
     console.log(props)
    const item= props.cart.map((item)=>{
         return(
@@ -16,7 +22,7 @@ export default function Checkout(props) {
        {item}
     </div>
      <div className="checkoutbtn">
-     <div className="buybtn">
+     <div className="buybtn" onClick={handleBuy}>
        Buy
      </div>
     </div>
