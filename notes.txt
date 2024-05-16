@@ -1,0 +1,21 @@
+useReducer :
+
+There is a relation between useReducer ansd reduce() method
+
+
+let number =[2,4,6]
+
+let sumOfNumbers = number.reduce(callback function, initialValue)
+
+
+number.map((item)=>{
+    console.log(item)
+})
+
+
+const reducer = (preValue,curValue)=>preValue+curValue
+
+
+const initialValue=0
+
+let sumOfNumber = number.reduce(reducer,initialValue)
