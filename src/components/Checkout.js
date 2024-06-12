@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Counter from './Counter'
 export default function Checkout(props) {
 
   const handleBuy=()=>{
@@ -25,6 +25,7 @@ export default function Checkout(props) {
      <div className="buybtn" onClick={handleBuy}>
        Buy
      </div>
+     <Counter/>
     </div>
     </>
   )
