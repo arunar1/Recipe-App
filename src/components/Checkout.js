@@ -13,6 +13,7 @@ export default function Checkout(props) {
             <div className='checkoutCard'>
             <img src={item.strMealThumb} />
             <h5>{item.strMeal}</h5>
+            <Counter/>
             </div>
         )
     })
@@ -22,11 +23,13 @@ export default function Checkout(props) {
        {item}
     </div>
      <div className="checkoutbtn">
-     <div className="buybtn" onClick={handleBuy}>
+
+     {props.cart.length > 0 ? <div className="buybtn" onClick={handleBuy}>
        Buy
-     </div>
-     <Counter/>
+     </div> : <h1 className='empty-head'>Cart is empty</h1>}
     </div>
+
+
     </>
   )
 }

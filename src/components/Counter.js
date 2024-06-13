@@ -1,34 +1,34 @@
 import React from 'react';
 import { useReducer } from 'react';
 
-const initialState=0
+const Counter = () => {    
+    const initialState=1
 
 const reducer=(state,action)=>{
     if(action==='add'){
         return (state=state+1)
     }
-    else{
-        state=0
+    else if(action==='add'){
+        return (state=state+1)
     }
-
+    else{
+        return initialState
+    }
 }
 
 
-const Counter = () => {    
-    const userReducerResult=useReducer(reducer,initialState)
-
-    const [state,dispatch]=userReducerResult
-
-    console.log(dispatch)
-    console.log(state)
+    const [state,dispatch]=useReducer(reducer,initialState)
 
     
     return (
         <div>
+             <button style={{marginRight:20}} onClick={()=>{
+                dispatch('minus')
+            }}>-</button>
             {state}
-            <button onClick={()=>{
+            <button style={{marginLeft:20}} onClick={()=>{
                 dispatch('add')
-            }}>add</button>
+            }}>+</button>
         </div>
     );
 }
