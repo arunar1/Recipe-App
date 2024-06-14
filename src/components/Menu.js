@@ -35,7 +35,7 @@ export default function Menu() {
     <div className="bg-color">
       
       <Router>
-      <Header />
+      <Header cart={cart} />
       <Hero />
         <AllMenu>
           <cartContent.Provider value={{ cart, setcart }}>
