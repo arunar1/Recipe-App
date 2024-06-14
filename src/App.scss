@@ -499,6 +499,7 @@ h2 {
 @media screen and ( max-width:700px  ){
   .hero{
      img {
+    height: 49vh;
     width: 100%;
     transform: translateY(0%);
   }
@@ -506,7 +507,7 @@ h2 {
     transform: translateX(2%);
     }
       P{
-        margin-bottom: -20px;
+        margin-bottom: -60px;
         color:red;
         }
     }
