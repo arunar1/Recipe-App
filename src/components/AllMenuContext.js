@@ -25,7 +25,7 @@ export const AllMenu=(props)=>{
             props.children
       ) : (
         <div className='load'>
-          <h2>LOADING</h2>
+          <h2>LOADING...</h2>
         </div>
       )}
             
